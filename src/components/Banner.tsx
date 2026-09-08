@@ -1,10 +1,9 @@
-import Banner from "../assets/banner-main.png"
+import BannerImg from "../assets/banner-main.png"
+
 const Banner = () => {
     return (
-        <div className="min-h [400px bg-purple-100 my-20 flex justify-center items-center">
-            <img src = {Banner} alt="" />
-
-            
+            <div className="min-h-100 bg-gradient-to-r from-fuchsia-500 to-cyan-500 my-20 flex justify-center items-center">
+            <img className="min-h-90%" src={BannerImg} alt="Banner" />
         </div>
     );
 };

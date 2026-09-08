@@ -1,0 +1,92 @@
+[
+  {
+    "playerName": "Bulbul",
+    "playerImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9qfLu-OsXkfNqv-pFI8AabJhD15HYGYCfSsH523mvKg&s=10",
+    "origin": "Bangladesh",
+    "playerType": "All-Rounder",
+    "bowlingStyle": "Left-arm orthodox",
+    "battingStyle": "Left-hand",
+    "price": 500
+  },
+  {
+    "playerName": "Babar Azam",
+    "playerImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCVKVr0CcTSubefdZGuPF5ONK9fe3MFMVCM1Kn6ITs0Q&s=10",
+    "origin": "Pakistan",
+    "playerType": "Batter",
+    "bowlingStyle": "Right-arm off break",
+    "battingStyle": "Right-hand",
+    "price": 300
+  },
+  {
+    "playerName": "Rashid Khan",
+    "playerImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc9AqKU7WqwH9NofW13vAionawrZZyHIRTKSTr2LX-8g&s=10",
+    "origin": "Afghanistan",
+    "playerType": "Bowler",
+    "bowlingStyle": "Right-arm leg break",
+    "battingStyle": "Right-hand",
+    "price": 700
+  },
+  {
+    "playerName": "Ben Stokes",
+    "playerImg": "https://s.yimg.com/lo/mysterio/api/01439d17504c9af03636fe174406caa1d781410903b20d8cc2f210ea71c8a3fd/lightyear_networkapi/resizefill_w976%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fthe_independent_us_sports_articles_270%2Fb61e65101c121336314dee46627aa5bc.jpg",
+    "origin": "England",
+    "playerType": "Wicket-Keeper Batter",
+    "bowlingStyle": "Right-arm medium",
+    "battingStyle": "Right-hand",
+    "price": 700
+  },
+  {
+    "playerName": "Adam Gilchrist",
+    "playerImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc5m9yuUWLkJDgNiDGS0v-E8RCTw9IP7W6oEGnB7znZg&s=10",
+    "origin": "Australia",
+    "playerType": "Batter",
+    "bowlingStyle": "Right-arm off break",
+    "battingStyle": "Left-hand",
+    "price": 700
+  },
+  {
+    "playerName": "Jasprit Bumrah",
+    "playerImg": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_1200,q_50/lsci/db/PICTURES/CMS/419700/419782.jpg",
+    "origin": "India",
+    "playerType": "Bowler",
+    "bowlingStyle": "Right-arm fast",
+    "battingStyle": "Right-hand",
+    "price": 700
+  },
+  {
+    "playerName": "Andre Russell",
+    "playerImg": "https://cricviz-westindies-production.s3.amazonaws.com/images/22aa77ff-ac05-4d27-8c46-b10091bab15f.width-800.jpg",
+    "origin": "West Indies",
+    "playerType": "All-Rounder",
+    "bowlingStyle": "Right-arm fast",
+    "battingStyle": "Right-hand",
+    "price": 700
+  },
+  {
+    "playerName": "Kane Williamson",
+    "playerImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5w11rBWsv6nPawUmrvixh04JF5iRzA2cb9OcEBGOtUg&s=10",
+    "origin": "New Zealand",
+    "playerType": "Batter",
+    "bowlingStyle": "Right-arm off break",
+    "battingStyle": "Right-hand",
+    "price": 700
+  },
+  {
+    "playerName": "Shaheen Afridi",
+    "playerImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlW4Ipg1D-Z2XgS8m-ES5Hbzbx-jpiWK6QZxqPVxHxQQ&s=10",
+    "origin": "Pakistan",
+    "playerType": "Bowler",
+    "bowlingStyle": "Left-arm fast",
+    "battingStyle": "Left-hand",
+    "price": 600
+  },
+  {
+    "playerName": "Harry Brooke",
+    "playerImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLy6WG3C0SnU1RF5k37Brm_CAbwO5ooCb6ZzruPigRSA&s=10",
+    "origin": "England",
+    "playerType": "All-Rounder",
+    "bowlingStyle": "Left-arm orthodox",
+    "battingStyle": "Left-hand",
+    "price": 200
+  }
+]
