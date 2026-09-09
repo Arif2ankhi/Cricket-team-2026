@@ -1,7 +1,28 @@
 import { FaUser, FaStar, FaMapMarkerAlt } from "react-icons/fa";
 import type { Iplayer } from "../types/player";
+import  { useState, type Dispatch, type SetStateAction } from "react";
+interface IPlayerCardProps {
+    player:Iplayer
+     coin: number;
+    setCoin:Dispatch<SetStateAction<number>>;
+}
 
-const PlayerCard = ({ player }: { player: Iplayer }) => {
+const PlayerCard = ({ player, coin, setCoin }: IPlayerCardProps) => {
+    const [isSelected, setIsSelected] = useState(false);
+
+    console.log(coin, setCoin, 'from card');
+    const handleSelectPlayer =() => {
+        setIsSelected(true);
+        const newCoinPrice = coin -player.price
+        if(newCoinPrice >= 0){
+            setCoin(newCoinPrice)
+
+        }
+        else{
+            alert('Coin is no Sufficiant to purchase')
+        }
+
+    }
   return (
     <div className="group w-full max-w-sm overflow-hidden rounded-3xl border border-base-300 bg-base-100 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
       
@@ -93,8 +114,11 @@ const PlayerCard = ({ player }: { player: Iplayer }) => {
           </div>
 
           {/* Button */}
-          <button className="btn btn-primary rounded-xl px-5 shadow-md transition hover:scale-105">
-            Choose Player
+          <button onClick={() => handleSelectPlayer()}
+           className={`btn btn-primary rounded-xl px-5 shadow-md transition hover:scale-105`}
+            disabled ={isSelected ? true :false}> 
+
+            { isSelected ===true ? 'Selected' : 'Choose Player'}
           </button>
 
         </div>

@@ -1,25 +1,49 @@
-import React, { use } from 'react';
+import  { use, useState, type Dispatch, type SetStateAction } from 'react';
 import type { Iplayer } from '../types/player';
 import AvailablePlayers from './AvailablePlayers';
+import SelectedPlayers from './SelectedPlayers';
 
 interface PlayersProps {
     playersPromise: Promise<Iplayer[]>
+    coin: number;
+    setCoin:Dispatch<SetStateAction<number>>;
 }
-const Player = ({playersPromise}: PlayersProps) => {
+const Player = ({playersPromise, coin, setCoin}: PlayersProps) => {
     // console.log(playersPromise);
     const players = use(playersPromise);
-    console.log(players, 'players');
+    // console.log(players, 'players');
+    const [buttonType, setButttonType] = useState('available')
+    console.log(buttonType);
+
+    const handleUpdateBtnType = (type: 'available' |'selected')=>{
+        setButttonType(type)
+
+    }
     return (
         <div className='container mx-auto'>
             <div className='flex justify-between gap-4 mb-2'>
-                <h2 className='font-bold text-3xl'>Available Players</h2>
+                <h2 className='font-bold text-3xl'> {buttonType === 'available' ? 'Available Players' : 'Selected Players'}</h2>
                 <div>
-                    <button className='btn btn-success'>Available</button>
-                    <button className='btn '>Select</button>
+                    <button 
+                    onClick={() => handleUpdateBtnType('available')}
+                    className={`btn  ${buttonType === 'available' ? 'btn-success' : '' } rounded-r-none`}>
+                        Available
+                        </button>
+
+
+                    <button
+                    onClick={() => handleUpdateBtnType('selected')}
+                     className={`btn  ${buttonType === 'selected' ? 'btn-success' : '' } rounded-l-none `}>
+                        Select
+                        </button>
                     
                 </div>
             </div>
-            <AvailablePlayers players = {players}/>
+            {buttonType === 'available' ? (<AvailablePlayers players = {players} coin={coin} setCoin={setCoin}/>
+            ): (
+                <SelectedPlayers/>
+            )}
+            
         </div>
     );
 };

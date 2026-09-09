@@ -1,16 +1,25 @@
 
 ;
+import type { Dispatch, SetStateAction } from 'react';
+import type { Iplayer } from '../types/player';
 import PlayerCard from './PlayerCard';
 
-const AvailablePlayers = ({players}) => {
-    console.log(players, 'players from  available players' );
+
+interface IAvailableprops {
+    players:Iplayer[]
+     coin: number;
+    setCoin:Dispatch<SetStateAction<number>>;
+}
+
+const AvailablePlayers = ({players, coin, setCoin}: IAvailableprops) => {
+    console.log(coin, setCoin, 'players from  available players' );
     
     return (
-        <div className='grid grid-cols-3 gap-7  mt-3'>
+        <div className='grid grid-cols-3 gap-7  mt-6'>
             {
                 players.map((player:Iplayer, ind: number) => {
                     return (
-                        <PlayerCard key ={ind} player={player}/>
+                        <PlayerCard key ={ind} player={player} coin={coin} setCoin= {setCoin}/>
 //  <div className="card bg-base-100 rounded-2xl shadow-sm">
 //   <figure>
 //     <img className='h-80 w-80'
