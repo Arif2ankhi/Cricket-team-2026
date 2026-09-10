@@ -12,7 +12,8 @@ const Player = ({playersPromise, coin, setCoin}: PlayersProps) => {
     // console.log(playersPromise);
     const players = use(playersPromise);
     // console.log(players, 'players');
-    const [buttonType, setButttonType] = useState('available')
+    const [buttonType, setButttonType] = useState <'available' | 'selected'>('available')
+     const [selectedPlayers, setSelectedPlayers] = useState<Iplayer[]>([]);
     console.log(buttonType);
 
     const handleUpdateBtnType = (type: 'available' |'selected')=>{
@@ -34,14 +35,20 @@ const Player = ({playersPromise, coin, setCoin}: PlayersProps) => {
                     <button
                     onClick={() => handleUpdateBtnType('selected')}
                      className={`btn  ${buttonType === 'selected' ? 'btn-success' : '' } rounded-l-none `}>
-                        Select
+                        Selected
                         </button>
                     
                 </div>
             </div>
-            {buttonType === 'available' ? (<AvailablePlayers players = {players} coin={coin} setCoin={setCoin}/>
+            {buttonType === 'available' ? (<AvailablePlayers players = {players}
+             coin={coin} setCoin={setCoin} 
+            selectedPlayers={selectedPlayers}
+             setSelectedPlayers={setSelectedPlayers}/>
             ): (
-                <SelectedPlayers/>
+                <SelectedPlayers 
+                selectedPlayers={selectedPlayers} 
+        setSelectedPlayers={setSelectedPlayers}
+                />
             )}
             
         </div>

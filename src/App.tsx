@@ -26,7 +26,7 @@ function App() {
    </Suspense>
     
       
-      {/* <button className="btn btn-primary">Button</button> */}
+    
     </>
   )
 }

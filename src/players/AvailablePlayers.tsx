@@ -9,9 +9,11 @@ interface IAvailableprops {
     players:Iplayer[]
      coin: number;
     setCoin:Dispatch<SetStateAction<number>>;
+    selectedPlayers:Iplayer[];
+    setSelectedPlayers: Dispatch<SetStateAction<Iplayer[]>>
 }
 
-const AvailablePlayers = ({players, coin, setCoin}: IAvailableprops) => {
+const AvailablePlayers = ({players, coin, setCoin, selectedPlayers, setSelectedPlayers}: IAvailableprops) => {
     console.log(coin, setCoin, 'players from  available players' );
     
     return (
@@ -19,7 +21,13 @@ const AvailablePlayers = ({players, coin, setCoin}: IAvailableprops) => {
             {
                 players.map((player:Iplayer, ind: number) => {
                     return (
-                        <PlayerCard key ={ind} player={player} coin={coin} setCoin= {setCoin}/>
+                        <PlayerCard 
+                        key ={ind}
+                         player={player}
+                          coin={coin}
+                           setCoin= {setCoin}
+                          selectedPlayers={selectedPlayers} 
+                          setSelectedPlayers={setSelectedPlayers}/>
 //  <div className="card bg-base-100 rounded-2xl shadow-sm">
 //   <figure>
 //     <img className='h-80 w-80'
